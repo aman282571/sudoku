@@ -120,11 +120,14 @@ function App() {
       </div>
       {/* //------------------------------messages-------------------------- */}
       <div id="msgs">
-        {validation.msg !== null ? <p>{validation.msg} </p> : ""}
-        {validation.err !== null ? <p id="error"> {validation.err} </p> : ""}
-        {ans.msg !== null ? <p> {ans.msg} </p> : ""}
+        {validation.msg !== null ? <p>{validation.msg}. </p> : ""}
+        {validation.err !== null ? <p id="error"> {validation.err}. </p> : ""}
+        {ans.msg !== null ? <p> {ans.msg}. </p> : ""}
         {ans.time !== null ? (
-          <p id="solved"> Sudoku solved in {ans.time}ms </p>
+          <p id="solved">
+            {" "}
+            Sudoku solved in {ans.time}ms and has {ans.a.length} solutions.
+          </p>
         ) : (
           ""
         )}
